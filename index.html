@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Diario Libre</title>
+  <title>Diario River</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -11,11 +11,11 @@
     <div class="top-bar">
       <h1>Diario River</h1>
       <span class="fecha">3 de junio de 2025</span>
-      <div class="menu-hamburguesa">☰</div>
+      <div class="menu">☰</div>
     </div>
     <nav class="nav">
       <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="https://bovolinijuan.github.io/TpFlex/">Inicio</a></li>
         <li><a href="https://www.rosario3.com/deportes/Copa-Libertadores-River-empato-sin-goles-con-Barcelona-de-Ecuador-y-Gallardo-asumio-que-falto-contundencia-20250409-0006.html">Política</a></li>
         <li><a href="https://www.rosario3.com/deportes/Copa-Libertadores-River-empato-sin-goles-con-Barcelona-de-Ecuador-y-Gallardo-asumio-que-falto-contundencia-20250409-0006.html">Economía</a></li>
         <li><a href="#">Deportes</a></li>
@@ -53,7 +53,18 @@
   </main>
 
   <footer class="footer">
-    <p>© 2025 El Diario Libre</p>
+    <p>© 2025 Diario River</p>
   </footer>
+   
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.querySelector(".menu");
+      const navMenu = document.querySelector(".nav ul");
+
+      menuBtn.addEventListener("click", function () {
+        navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>
