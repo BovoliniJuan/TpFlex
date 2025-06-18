@@ -16,7 +16,7 @@ window.onload = function () {
   };
 
   var validators = {
-    fullname: function (v) { return v.length > 6 && /\s+/.test(v); },
+    fullname: function (v) { return v.length > 4 && /\s+/.test(v); },
     email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
     password: function (v) { return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(v); },
     confirm: function (v) { return v === fields.password.value; },
@@ -29,7 +29,7 @@ window.onload = function () {
   };
 
   var messages = {
-    fullname: "Debe tener más de 6 letras y un espacio",
+    fullname: "Debe tener más de 4 letras y un espacio",
     email: "Email inválido",
     password: "8 caracteres, letras y números",
     confirm: "Las contraseñas deben coincidir",
@@ -71,7 +71,7 @@ window.onload = function () {
 fields.fullname.addEventListener('input', function () {
   var nombre = fields.fullname.value.toUpperCase();
   greeting.textContent = nombre.trim() === '' ? 'HOLA' : 'HOLA ' + nombre;
-});
+});//Utilize el keydown pero no me tomaba la ultima letra por lo que lo cambie por input
 
 
   fields.fullname.addEventListener('focus', function () {
