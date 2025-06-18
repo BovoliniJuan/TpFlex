@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mostrar navegación en escritorio */
+@media (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+/* Contenedor principal */
+.contenido {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Formulario */
+form {
+  width: 100%;
+  max-width: 700px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#formTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Campos del formulario en grilla */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Estilo campos */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Mensaje de error */
+small.error {
+  color: red;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Botón enviar */
+.form-actions {
+  text-align: center;
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+}
+
+.btn-enviar {
+  padding: 0.75rem 2rem;
+  background-color: #c00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #900;
+}
+
+/* Dos columnas en pantallas grandes */
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-actions {
+    grid-column: 1 / 3;
+  }
+}
